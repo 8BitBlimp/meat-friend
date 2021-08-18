@@ -1,0 +1,6 @@
+{
+    "BOT_TOKEN": "",
+    "prefix": "?",
+    "logsChannel": "mod-logs",
+    "reportsChannel": "reports"
+}
