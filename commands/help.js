@@ -22,7 +22,6 @@ module.exports.run = async (bot, message, args) => {
         Kissultra
         Ping
         Report`)
-        .setFooter(target.user.displayAvatarURL);
 
     message.channel.send(embed);
   }
