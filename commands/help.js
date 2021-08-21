@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle('Commands')
         .addField('Introduction Commands:', 'Adrienne', 'Amber', 'Emma', 'Magnus', 'Michael', 'Molly', 'Nicolas', 'Rebecca', 'Teo', 'Valerie')
         .addField('Mod Commands:', 'Ban', 'Kick')
-        .addField('Misc commands:', 'Avatar', 'Help', 'Kiss', 'Kissultra', 'Ping', 'Report')
+        .addField('Misc commands:', 'Avatar', 'Help', 'Kiss', 'Kissultra', 'Ping', 'Report');
         
     message.channel.send(embed);
   }
