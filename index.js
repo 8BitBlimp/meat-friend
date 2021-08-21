@@ -28,7 +28,7 @@ jsfile.forEach((f, i) =>{
 
 });
 
-fs.readdir("./commands/introductions/", (err, files) => {
+/* fs.readdir("./commands/introductions/", (err, files) => {
 
   if(err) console.log(err);
 
@@ -44,7 +44,7 @@ jsfile.forEach((f, i) =>{
   bot.commands.set(props.help.name, props);
 });
 
-});
+}); */
 
 
 bot.on('ready', () => {
