@@ -49,7 +49,7 @@ jsfile.forEach((f, i) =>{
 
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
-  bot.user.setActivity(`${bot.guilds.cache.size} servers`, {type: "WATCHING"});
+  bot.user.setActivity(`.help | Welcome to Friend Camp! Make sure to make some friends...`, {type: "PLAYING"});
 });
 
 
