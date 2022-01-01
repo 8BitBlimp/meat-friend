@@ -16,10 +16,10 @@ module.exports.run = async (bot, message, args) => {
       .addField(`NSFW:`, `none yet`)
       message.channel.send(embed);
   }
-  else if(args[0] == 'introduction') {
+  else if(section == 'introduction') {
     let embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
-        .setTitle('Commands')
+        .setTitle('Introduction')
         .addField(`Introduction Commands:`, `Adrienne
         Amber
         Emma
@@ -32,28 +32,34 @@ module.exports.run = async (bot, message, args) => {
         Valerie`)
         message.channel.send(embed);
   }
-  else{
+  else if(section == 'mod') {
     let embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
-        .setTitle('Commands')
-        .addField(`Introduction Commands:`, `Adrienne
-        Amber
-        Emma
-        Magnus
-        Michael
-        Molly
-        Nicolas
-        Rebecca 
-        Teo 
-        Valerie`)
-        .addField('Mod Commands:', `Ban 
+        .setTitle('Mod')
+        .addField(`Mod Commands:`, `Ban
         Kick`)
-        .addField('Misc commands:', `Avatar
+        message.channel.send(embed);
+  }
+  else if(section == 'misc') {
+    let embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('Misc')
+        .addField(`Misc Commands:`, `Avatar
         Help
-        Kiss
         Kissultra
         Ping
         Report`)
+        message.channel.send(embed);
+  }
+  else{
+    let embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('Categories')
+        .addField(`Fun:`, `Interaction commands.`)
+        .addField(`Introduction:`, `A list of all introduction commands.`)
+        .addField(`Mod:`, 'A list of all the commands a mod has access to.')
+        .addField(`Misc:`, `A list of random/unsorted commands everyone can use.`)
+        .setFooter('Use ".help {category}" to get more info.')
 
     message.channel.send(embed);
   }
