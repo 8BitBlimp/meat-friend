@@ -31,6 +31,24 @@ jsfile.forEach((f, i) =>{
 
 });
 
+fs.readdir("./commands/neko/", (err, files) => {
+
+  if(err) console.log(err);
+
+  let jsfile = files.filter(f => f.split(".").pop() === "js");
+  if(jsfile.length <= 0){
+    console.log("Couldn't find neko commands.");
+    return;
+  }
+
+jsfile.forEach((f, i) =>{
+  let props = require(`./commands/neko/${f}`);
+  console.log(`${f} loaded!`);
+  bot.commands.set(props.help.name, props);
+});
+
+});
+
 /* fs.readdir("./commands/introductions/", (err, files) => {
 
   if(err) console.log(err);
