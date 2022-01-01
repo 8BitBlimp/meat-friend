@@ -7,12 +7,28 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Discord.MessageEmbed()
       .setColor('RANDOM')
       .setTitle('Fun')
-      .addField(`SFW:`, `baka
-      pat
-      poke
-      slap
-      smug
-      tickle`)
+      .addField(`SFW:`, `Baka
+      Cuddle
+      Feed
+      Foxgirl
+      gecg (genetically engineered catgirl)
+      Goose
+      Holo
+      Hug
+      Kemonomimi
+      Kiss
+      Lizard
+      Meow
+      Neko
+      NekoGif
+      Pat
+      Poke
+      Slap
+      Smug
+      Tickle
+      Waifu
+      Wallpaper
+      Woof`)
       .addField(`NSFW:`, `none yet`)
       message.channel.send(embed);
   }
