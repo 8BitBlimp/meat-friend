@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
 
-  if(arguments[0] == 'fun'){
+  if(arguments[2] == 'fun'){
     let embed = new Discord.MessageEmbed()
       .setColor('RANDOM')
       .setTitle('Fun')
