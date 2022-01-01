@@ -14,6 +14,7 @@ module.exports.run = async (bot, message, args) => {
       smug
       tickle`)
       .addField(`NSFW:`, `none yet`)
+      message.channel.send(embed);
   }
   else if(args[0] == 'introduction') {
     let embed = new Discord.MessageEmbed()
