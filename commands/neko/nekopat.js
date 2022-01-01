@@ -4,7 +4,7 @@ const neko = new client();
 
 
 module.exports.run = async (bot, message, args) => {
-    message.channel.send(neko.sfw.pat())
+    neko.sfw.pat().then(pat => {message.channel.send(pat);});
   }
 
   module.exports.help = {
