@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
 
-  if(args == 'fun'){
+  if(args[0] == 'fun'){
     let embed = new Discord.MessageEmbed()
       .setColor('RANDOM')
       .setTitle('Fun')
@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
       tickle`)
       .addField(`NSFW:`, `none yet`)
   }
-  else if(args == 'introduction') {
+  else if(args[0] == 'introduction') {
     let embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
         .setTitle('Commands')
