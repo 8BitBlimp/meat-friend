@@ -1,8 +1,11 @@
 const Discord = require('discord.js');
 const config = require('./config.json');
+const client = require('nekos.life');
 const bot = new Discord.Client();
+const neko = new client();
 const fs = require("fs");
 bot.commands = new Discord.Collection();
+
 
 
 
@@ -50,6 +53,7 @@ jsfile.forEach((f, i) =>{
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
   bot.user.setActivity(`.help | Welcome to Friend Camp! Make sure to make some friends...`, {type: "PLAYING"});
+
 });
 
 
@@ -70,6 +74,6 @@ bot.on("message", async message => {
 })
 
 
-
-bot.login(process.env.FriendTOKEN);
+bot.login('NzU1MzY2ODU0OTY0MjgxMzU0.X2CQNA.dRNVWmdleyY51ynasa8U0TdwHiY')
+//bot.login(process.env.FriendTOKEN);
 
