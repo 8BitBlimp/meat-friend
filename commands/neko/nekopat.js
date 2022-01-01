@@ -4,7 +4,12 @@ const neko = new client();
 
 
 module.exports.run = async (bot, message, args) => {
-    neko.sfw.pat().then(pat => {console.log(pat);});
+    const GIF = await neko.sfw.pat();
+    const embed = new Discord.MessageEmbed()
+    .setColor('RANDOM')
+    .setTitle(`${message.author.tag} here's a random neko pat image/gif`)
+    .setImage(GIF.url)
+    message.channel.send(embed);
   }
 
   module.exports.help = {
