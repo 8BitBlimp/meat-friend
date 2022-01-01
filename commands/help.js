@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
+  let section = args.slice(0).join(' ');
 
-  if(arguments[2] == 'fun'){
+  if(section == 'fun'){
     let embed = new Discord.MessageEmbed()
       .setColor('RANDOM')
       .setTitle('Fun')
