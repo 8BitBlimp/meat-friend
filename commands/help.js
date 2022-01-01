@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
       Waifu
       Wallpaper
       Woof`)
-      .addField(`NSFW:`, `none yet`)
+      .addField(`NSFW:`, `Lewd`)
       message.channel.send(embed);
   }
   else if(section == 'introduction') {
