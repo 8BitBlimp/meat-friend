@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "discord.js": "^12.5.3",
+    "memer-api": "^4.0.1",
     "nekos.life": "^2.0.7"
   },
   "scripts": {

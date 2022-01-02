@@ -6,6 +6,9 @@ const neko = new client();
 const fs = require("fs");
 bot.commands = new Discord.Collection();
 
+const Meme = require('memer-api');
+const memer = new Meme('8gzAiAfiDsh');
+
 
 
 
@@ -43,6 +46,24 @@ fs.readdir("./commands/neko/", (err, files) => {
 
 jsfile.forEach((f, i) =>{
   let props = require(`./commands/neko/${f}`);
+  console.log(`${f} loaded!`);
+  bot.commands.set(props.help.name, props);
+});
+
+});
+
+fs.readdir("./commands/meme/", (err, files) => {
+
+  if(err) console.log(err);
+
+  let jsfile = files.filter(f => f.split(".").pop() === "js");
+  if(jsfile.length <= 0){
+    console.log("Couldn't find meme commands.");
+    return;
+  }
+
+jsfile.forEach((f, i) =>{
+  let props = require(`./commands/meme/${f}`);
   console.log(`${f} loaded!`);
   bot.commands.set(props.help.name, props);
 });
