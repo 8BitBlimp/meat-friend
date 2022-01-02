@@ -53,18 +53,18 @@ jsfile.forEach((f, i) =>{
 
 });
 
-fs.readdir("./commands/nsfw-neko/", (err, files) => {
+fs.readdir("./commands/neko-nsfw/", (err, files) => {
 
   if(err) console.log(err);
 
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0){
-    console.log("Couldn't find nsfw-neko commands.");
+    console.log("Couldn't find neko-nsfw commands.");
     return;
   }
 
 jsfile.forEach((f, i) =>{
-  let props = require(`./commands/nsfw-neko/${f}`);
+  let props = require(`./commands/neko-nsfw/${f}`);
   console.log(`${f} loaded!`);
   bot.commands.set(props.help.name, props);
 });
