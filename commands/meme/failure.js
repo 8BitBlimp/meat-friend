@@ -10,7 +10,9 @@ module.exports.run = async (bot, message, args) => {
         .setColor('RANDOM')
         .setTitle(`${message.author.tag} here's your failure meme!`)
         .setImage(failure.url)
-        message.channel.send(embed);
+        Promise
+            .then(message.channel.send(embed))
+            .catch(message.channel.send('Meme failed.'))
     }
     catch (error) {
         let failure = memer.failure(message.author.displayAvatarURL())
@@ -18,8 +20,9 @@ module.exports.run = async (bot, message, args) => {
         .setColor('RANDOM')
         .setTitle(`${message.author.tag} here's your failure meme!`)
         .setImage(failure.url)
-        message.channel.send(embed);
-        console.log(failure)
+        Promise
+            .then(message.channel.send(embed))
+            .catch(error => { message.channel.send('Meme failed.') });
     }
   }
 
