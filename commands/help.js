@@ -67,11 +67,29 @@ module.exports.run = async (bot, message, args) => {
         Report`)
         message.channel.send(embed);
   }
+  else if(section == 'meme') {
+    let embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('Meme')
+        .addField(`Meme Commands:`, `Aborted
+        Bongocat
+        Communism
+        Disability
+        Failure
+        Hitler
+        Laid
+        Notstonks
+        Satan
+        Savehumanity
+        Stonks`)
+        message.channel.send(embed);
+  }
   else{
     let embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
         .setTitle('Categories')
         .addField(`Fun:`, `Interaction commands.`)
+        .addField(`Meme:`, 'A list of all the meme commands.')
         .addField(`Introduction:`, `A list of all introduction commands.`)
         .addField(`Mod:`, 'A list of all the commands a mod has access to.')
         .addField(`Misc:`, `A list of random/unsorted commands everyone can use.`)
