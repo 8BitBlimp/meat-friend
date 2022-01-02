@@ -29,7 +29,45 @@ module.exports.run = async (bot, message, args) => {
       Waifu
       Wallpaper
       Woof`)
-      .addField(`NSFW:`, `Lewd`)
+      .addField(`NSFW:`, `Anal
+      rAvatar
+      BJ
+      Blowjob
+      Boobs
+      Classic
+      CumArts
+      Cumsluts
+      Ero
+      EroFeet
+      EroKemonomimi
+      EroKitsune
+      EroNeko
+      EroYuri
+      Feet
+      FeetGif
+      Femdom
+      Futanari
+      Gasm
+      GirlSolo
+      GirlSoloGif
+      Hentai
+      rHolo
+      HoloEro
+      rKemonomimi
+      Keta
+      rKitsune
+      Kuni
+      Lesbian
+      rNeko
+      rNekoGif
+      Pussy
+      PussyArts
+      PussyWankGif
+      RandomHentaiGif
+      Spank
+      Tits
+      Trap
+      Yuri`)
       message.channel.send(embed);
   }
   else if(section == 'introduction') {
