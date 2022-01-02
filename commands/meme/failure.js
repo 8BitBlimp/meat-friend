@@ -19,6 +19,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle(`${message.author.tag} here's your failure meme!`)
         .setImage(failure.url)
         message.channel.send(embed);
+        console.log(failure)
     }
   }
 
