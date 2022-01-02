@@ -6,19 +6,17 @@ const fetch = require('node-fetch');
 module.exports.run = async (bot, message, args) => {
     const user = message.mentions.users.first();
     try{
-        pain = `https://memer-api.live/api/v4/failure?token=8gzAiAfiDsh&avatars=` + user.displayAvatarURL()
-        console.log(pain);
-        fetch(pain)
-        .then(res => res.buffer())
-        .then(data => console.log(data))
-        .catch(e => console.error(e));
+        memer.failure(user.displayAvatarURL()).then(image => {
+            var attachment = new Discord.MessageAttachment(image, "failure.png");
+            messsage.channel.send(attachment)
+        })
     }
     catch(error) {
-        fetch(`https://memer-api.live/api/v4/failure?token=8gzAiAfiDsh&avatars=` + message.author.displayAvatarURL())
-        .then(res => res.bffer())
-        .then(data => message.channel.send(data))
+        memer.failure(message.author.displayAvatarURL()).then(image => {
+            var attachment = new Discord.MessageAttachment(image, "failure.png");
+            messsage.channel.send(attachment)
+        })
     }
-    
 }
 
   module.exports.help = {
