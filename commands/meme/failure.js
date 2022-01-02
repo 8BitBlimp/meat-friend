@@ -1,30 +1,22 @@
 const Meme = require('memer-api');
 const memer = new Meme('8gzAiAfiDsh');
 const Discord = require('discord.js');
+const fetch = require('node-fetch');
 
 module.exports.run = async (bot, message, args) => {
     const user = message.mentions.users.first();
-    try {
-        let failure = memer.failure(user.displayAvatarURL())
-        let embed = new Discord.MessageEmbed()
-        .setColor('RANDOM')
-        .setTitle(`${message.author.tag} here's your failure meme!`)
-        .setImage(failure.url)
-        Promise
-            .then(message.channel.send(embed))
-            .catch(message.channel.send('Meme failed.'))
+    try{
+        fetch(`https://memer-api.live/api/v4/failure?token=MemerAPIToken&avatars=${user.displayAvatarURL()}`)
+        .then(res => res.buffer())
+        .then(data => message.channel.send(data))
     }
-    catch (error) {
-        let failure = memer.failure(message.author.displayAvatarURL())
-        let embed = new Discord.MessageEmbed()
-        .setColor('RANDOM')
-        .setTitle(`${message.author.tag} here's your failure meme!`)
-        .setImage(failure.url)
-        Promise
-            .then(message.channel.send(embed))
-            .catch(error => { message.channel.send('Meme failed.') });
+    catch(error) {
+        fetch(`https://memer-api.live/api/v4/failure?token=MemerAPIToken&avatars=${message.author.displayAvatarURL()}`)
+        .then(res => res.buffer())
+        .then(data => message.channel.send(data))
     }
-  }
+    
+}
 
   module.exports.help = {
     name: "failure"

@@ -5,6 +5,7 @@ const bot = new Discord.Client();
 const neko = new client();
 const fs = require("fs");
 bot.commands = new Discord.Collection();
+const fetch = require('node-fetch');
 
 const Meme = require('memer-api');
 const memer = new Meme('8gzAiAfiDsh');
