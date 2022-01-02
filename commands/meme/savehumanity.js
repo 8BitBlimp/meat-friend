@@ -12,10 +12,8 @@ module.exports.run = async (bot, message, args) => {
         })
     }
     catch(error) {
-        memer.savehumanity(section).then(image => {
-            var attachment = new Discord.MessageAttachment(image, "savehumanity.png");
-            message.channel.send(attachment)
-        })
+        message.channel.send('Input text after command.')
+        
     }
 }
 
