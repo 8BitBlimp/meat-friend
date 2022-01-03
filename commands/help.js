@@ -137,6 +137,7 @@ module.exports.run = async (bot, message, args) => {
         .addField(`Introduction:`, `A list of all introduction commands.`)
         .addField(`Mod:`, 'A list of all the commands a mod has access to.')
         .addField(`Misc:`, `A list of random/unsorted commands everyone can use.`)
+        .addField(`NSFW:`, `A list of all NSFW commands (dont' use outside NSFW channel)`)
         .setFooter('Use ".help {category}" to get more info.')
 
     message.channel.send(embed);
