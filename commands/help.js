@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Discord.MessageEmbed()
       .setColor('RANDOM')
       .setTitle('Fun')
-      .addField(`SFW:`, `Baka
+      .addField(`Interaction commands:`, `Baka
       Cuddle
       Feed
       Foxgirl
@@ -29,7 +29,38 @@ module.exports.run = async (bot, message, args) => {
       Waifu
       Wallpaper
       Woof`)
-      .addField(`NSFW:`, `Anal
+      
+      message.channel.send(embed);
+  }
+  else if(section == 'introduction') {
+    let embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('Introduction')
+        .addField(`Introduction Commands:`, `Adrienne
+        Amber
+        Emma
+        Magnus
+        Michael
+        Molly
+        Nicolas
+        Rebecca 
+        Teo 
+        Valerie`)
+        message.channel.send(embed);
+  }
+  else if(section == 'mod') {
+    let embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('Mod')
+        .addField(`Mod Commands:`, `Ban
+        Kick`)
+        message.channel.send(embed);
+  }
+  else if(section == 'nsfw') {
+    let embed = new Discord.MessageEmbed()
+      .setColor('RANDOM')
+      .setTitle('NSFW')
+      .addField(`NSFW commands:`, `Anal
       rAvatar
       BJ
       Blowjob
@@ -68,31 +99,6 @@ module.exports.run = async (bot, message, args) => {
       Tits
       Trap
       Yuri`)
-      message.channel.send(embed);
-  }
-  else if(section == 'introduction') {
-    let embed = new Discord.MessageEmbed()
-        .setColor('RANDOM')
-        .setTitle('Introduction')
-        .addField(`Introduction Commands:`, `Adrienne
-        Amber
-        Emma
-        Magnus
-        Michael
-        Molly
-        Nicolas
-        Rebecca 
-        Teo 
-        Valerie`)
-        message.channel.send(embed);
-  }
-  else if(section == 'mod') {
-    let embed = new Discord.MessageEmbed()
-        .setColor('RANDOM')
-        .setTitle('Mod')
-        .addField(`Mod Commands:`, `Ban
-        Kick`)
-        message.channel.send(embed);
   }
   else if(section == 'misc') {
     let embed = new Discord.MessageEmbed()
