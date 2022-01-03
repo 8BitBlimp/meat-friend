@@ -99,6 +99,7 @@ module.exports.run = async (bot, message, args) => {
       Tits
       Trap
       Yuri`)
+      message.channel.send(embed)
   }
   else if(section == 'misc') {
     let embed = new Discord.MessageEmbed()
@@ -131,6 +132,7 @@ module.exports.run = async (bot, message, args) => {
   else{
     let embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
+        .setImage(message.author.displayAvatarURL())
         .setTitle('Categories')
         .addField(`Fun:`, `Interaction commands.`)
         .addField(`Meme:`, 'A list of all the meme commands.')
