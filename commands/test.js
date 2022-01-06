@@ -4,8 +4,8 @@ module.exports.run = async (bot, message, args) => {
     if(message.author.id == '605442511997108224') {
         colour = args[0];
         
-        role = Role.name('Professional Campers')
-        role.setColor('#F0F768')
+        let role = message.guild.roles.cache.find(role => role.name === "Professional Campers");
+        role.setColor(colour)
         
     }
     else{
