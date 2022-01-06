@@ -134,6 +134,6 @@ bot.on("message", async message => {
 })
 
 
-bot.login('NzU1MzY2ODU0OTY0MjgxMzU0.X2CQNA.dRNVWmdleyY51ynasa8U0TdwHiY')
-//bot.login(process.env.FriendTOKEN);
+
+bot.login(process.env.FriendTOKEN);
 
