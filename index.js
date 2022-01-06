@@ -14,8 +14,6 @@ const memer = new Meme('8gzAiAfiDsh');
 
 
 
-const prefix = "!";
-
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -127,8 +125,12 @@ bot.on("message", async message => {
 
 
   //checks if message contains a command and runs it
-  let commandfile = bot.commands.get(command.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
+  if(message.content.startsWith('.')) {
+    let commandfile = bot.commands.get(command.slice(prefix.length));
+    if(commandfile) commandfile.run(bot,message,args);
+  }
+  
+  
 })
 
 

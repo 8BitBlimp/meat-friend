@@ -1,6 +1,6 @@
 {
     "BOT_TOKEN": "",
-    "prefix": "?",
+    "prefix": ".",
     "logsChannel": "mod-logs",
     "reportsChannel": "reports",
     "roleID": "926116122535821392"
