@@ -3,5 +3,6 @@
     "prefix": ".",
     "logsChannel": "mod-logs",
     "reportsChannel": "reports",
-    "roleID": "926116122535821392"
+    "roleID": "926116122535821392",
+    "owners": ["605442511997108224", "745624184058675321"]
 }
