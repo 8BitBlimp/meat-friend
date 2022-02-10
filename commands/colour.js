@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const config = require('./utility-config.json')
 
 module.exports.run = async (bot, message, args) => {
-  if(config.roleID.includes(message.author.id())) {
+  if(config.roleID.includes(message.author.id)) {
         colour = args[0];
         
         let role = message.guild.roles.cache.find(r => r.id === message.mentions.roles.first());
