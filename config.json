@@ -1,5 +1,5 @@
 {
-    "BOT_TOKEN": "",
+    "token": "",
     "prefix": ".",
     "logsChannel": "mod-logs",
     "reportsChannel": "reports",

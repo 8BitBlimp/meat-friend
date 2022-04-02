@@ -1,14 +1,21 @@
 const Discord = require('discord.js');
 const utility = require('./utility-config.json');
+// var config = require('./config.json');
 
 module.exports.run = async (bot, message, args) => {
-    if(utility.roleID.includes(message.author.id())) {
-        message.channel.send('Test succeeded!')
-        
+
+
+    // check message senders id
+
+
+    if(utility.owners.includes(message.author.id)) {
+        return message.channel.send('poggers');
     }
     else {
-        console.error();
+        return message.channel.send(`You don't have permission to use this command.`);
     }
+
+
   }
 
   module.exports.help = {
