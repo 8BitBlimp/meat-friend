@@ -53,7 +53,10 @@ module.exports.run = async (bot, message, args) => {
         .setColor('RANDOM')
         .setTitle('Mod')
         .addField(`Mod Commands:`, `Ban
-        Kick`)
+        Kick
+        Role
+        Removerole
+        Colour`)
         message.channel.send(embed);
   }
   else if(section == 'nsfw') {
