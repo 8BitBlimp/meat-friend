@@ -119,13 +119,13 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === 'dm') return;
   let content = message.content.split(" ");
-  let command = content[0];
+  let command = content[0].toLowerCase();
   let args = content.slice(1);
   let prefix = config.prefix;
 
 
   //checks if message contains a command and runs it
-  if(message.content.startsWith('.')) {
+  if(message.content.startsWith(prefix)) {
     let commandfile = bot.commands.get(command.slice(prefix.length));
     if(commandfile) commandfile.run(bot,message,args);
   }
