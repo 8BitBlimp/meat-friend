@@ -11,9 +11,10 @@ module.exports.run = async (bot, message, args) => {
   if(!user) {
     user = message.author;
   }
-  let nickname = message.guild.members.cache.get(user).nickname;
+  let nickname = message.guild.members.cache.get(user.id);
 
-  console.log(nickname);
+
+  console.log(nickname.displayname);
 
 
   
